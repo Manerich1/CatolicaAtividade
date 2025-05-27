@@ -1,67 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JFK Pacotes Turísticos</title>
+    <title>Pacotes JFK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>JFK</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Navegação</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="carousel">
-        <div class="carousel-images">
-            <img src="img/banner.jpg" alt="Banner de Nova York">
-        </div>
-    </section>
-
-    <main>
-        <h2>Veja todos os nossos pacotes disponíveis:</h2>
-        <div class="grid">
-            <div class="pacote">
-                <img src="img/brooklyn.jpg" alt="Ponte do Brooklyn">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/wallstreet.jpg" alt="Wall Street">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/torre-eiffel.jpg" alt="Torre Eiffel">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/bean.jpg" alt="The Bean - Chicago">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/times-square.jpg" alt="Times Square">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/estatua-liberdade.jpg" alt="Estátua da Liberdade">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/nova-york.jpg" alt="Nova York Vista Aérea">
-                <button>Detalhes</button>
-            </div>
-            <div class="pacote">
-                <img src="img/banner.jpg" alt="Imagem adicional">
-                <button>Detalhes</button>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">JFK Viagens</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pacotes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
             </div>
         </div>
-    </main>
+    </nav>
 
-    <footer>
-        Rodapé da página
-    </footer>
+    <!-- Carousel com imagens -->
+    <div id="carouselPacotes" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner.jpg" class="d-block w-100" alt="Banner Principal">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nova-york.jpg" class="d-block w-100" alt="Nova York">
+            </div>
+            <div class="carousel-item">
+                <img src="img/torre-eiffel.jpg" class="d-block w-100" alt="Paris Torre Eiffel">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPacotes" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPacotes" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Grid de Pacotes -->
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!-- Pacote Estátua da Liberdade -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/estatua-liberdade.jpg" class="card-img-top" alt="Estátua da Liberdade">
+                    <div class="card-body">
+                        <h5 class="card-title">Estátua da Liberdade</h5>
+                        <a href="detalhes.html?pacote=liberdade" class="btn btn-primary">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pacote Times Square -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/times-square.jpg" class="card-img-top" alt="Times Square">
+                    <div class="card-body">
+                        <h5 class="card-title">Times Square</h5>
+                        <a href="detalhes.html?pacote=times-square" class="btn btn-primary">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pacote Torre Eiffel -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/torre-eiffel.jpg" class="card-img-top" alt="Torre Eiffel">
+                    <div class="card-body">
+                        <h5 class="card-title">Torre Eiffel</h5>
+                        <a href="detalhes.html?pacote=eiffel" class="btn btn-primary">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Você pode replicar mais pacotes conforme suas imagens -->
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

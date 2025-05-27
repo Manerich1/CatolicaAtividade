@@ -6,6 +6,26 @@
     font-family: Arial, sans-serif;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+
 /* Header */
 header {
     background-color: #111;
